@@ -329,17 +329,16 @@
 		$(document).ready(function () {
 			for (var i = 0; i < 6 ; i++) {
 				console.log(i);
-				var x = $(".device:eq(i)").val();
-
+				var x = $(`.device:eq(${i})`).text();
 				console.log(x);
 				if (x == "Pc") {
-					$(".pc").parents().eq(5).css('background-color', 'red');
+					$(`.device:eq(${i})`).parents().eq(5).css('background-color', 'red');
 
 				} else if (x == "Tablet") {
-					$(".tablet").parents().eq(5).css('background-color', 'blue');
+					$(`.device:eq(${i})`).parents().eq(5).css('background-color', 'blue');
 
 				} else if (x == "Phone") {
-					$(".phone").parents().eq(5).css('background-color', 'green');
+					$(`.device:eq(${i})`).parents().eq(5).css('background-color', 'green');
 
 				}
 			}
