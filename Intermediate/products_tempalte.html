@@ -327,10 +327,13 @@
 
 
 		$(document).ready(function () {
+			// creating a I loop to go through all the available options after adding the class="device"
 			for (var i = 0; i < 6 ; i++) {
 				console.log(i);
+				//taking that generated i val and inserting it within the eq, calling apon the given data location value and assining it to X
 				var x = $(`.device:eq(${i})`).text();
 				console.log(x);
+				//if statement looking at the x val and chaning the background color based on the data location with the help of I
 				if (x == "Pc") {
 					$(`.device:eq(${i})`).parents().eq(5).css('background-color', 'red');
 
